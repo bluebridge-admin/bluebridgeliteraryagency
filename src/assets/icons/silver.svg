@@ -1,0 +1,51 @@
+<svg
+  viewBox="0 0 100 100"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+  <defs>
+    <linearGradient id="silverGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color: #f5f7fa" />
+      <stop offset="50%" style="stop-color: #c3cfe2" />
+      <stop offset="100%" style="stop-color: #8e99a6" />
+    </linearGradient>
+    <linearGradient id="silverInner" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color: #758595" />
+      <stop offset="100%" style="stop-color: #e3e8ee" />
+    </linearGradient>
+  </defs>
+
+  <!-- Shield Base -->
+  <path
+    d="M50 95C25 85 10 70 10 35L50 10L90 35C90 70 75 85 50 95Z"
+    fill="url(#silverGradient)"
+    stroke="#5A6A7A"
+    stroke-width="2"
+  />
+  <path
+    d="M50 88C30 79 18 68 18 39L50 19L82 39C82 68 70 79 50 88Z"
+    fill="url(#silverInner)"
+    opacity="0.9"
+  />
+
+  <!-- Icon: Handshake or Chevrons (Silver Level - using 2 Stars for clarity) -->
+  <g transform="translate(0, 5)">
+    <path d="M40 35L44 46H56L46 53L50 64L40 57L30 64L34 53L24 46H36L40 35Z" fill="white" />
+    <path d="M60 35L64 46H76L66 53L70 64L60 57L50 64L54 53L44 46H56L60 35Z" fill="white" />
+  </g>
+
+  <!-- Label Banner -->
+  <rect x="25" y="70" width="50" height="12" rx="2" fill="#5A6A7A" />
+  <text
+    x="50"
+    y="79"
+    font-family="Arial, sans-serif"
+    font-size="7"
+    font-weight="bold"
+    fill="white"
+    text-anchor="middle"
+  >
+    SILVER
+  </text>
+</svg>
