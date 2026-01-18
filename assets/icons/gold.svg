@@ -1,0 +1,52 @@
+<svg
+  viewBox="0 0 100 100"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color: #ffd700" />
+      <stop offset="50%" style="stop-color: #fdb931" />
+      <stop offset="100%" style="stop-color: #b38b00" />
+    </linearGradient>
+    <linearGradient id="goldInner" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color: #b38b00" />
+      <stop offset="100%" style="stop-color: #ffee80" />
+    </linearGradient>
+  </defs>
+
+  <!-- Shield Base -->
+  <path
+    d="M50 95C25 85 10 70 10 35L50 10L90 35C90 70 75 85 50 95Z"
+    fill="url(#goldGradient)"
+    stroke="#8A6E00"
+    stroke-width="2"
+  />
+  <path
+    d="M50 88C30 79 18 68 18 39L50 19L82 39C82 68 70 79 50 88Z"
+    fill="url(#goldInner)"
+    opacity="0.9"
+  />
+
+  <!-- Icon: Crown or Wreath (Gold Level) -->
+  <!-- Simple Crown design -->
+  <path d="M30 45 L30 60 L70 60 L70 45 L60 52 L50 35 L40 52 Z" fill="white" />
+  <circle cx="30" cy="42" r="3" fill="white" />
+  <circle cx="70" cy="42" r="3" fill="white" />
+  <circle cx="50" cy="32" r="3" fill="white" />
+
+  <!-- Label Banner -->
+  <rect x="25" y="70" width="50" height="12" rx="2" fill="#8A6E00" />
+  <text
+    x="50"
+    y="79"
+    font-family="Arial, sans-serif"
+    font-size="7"
+    font-weight="bold"
+    fill="white"
+    text-anchor="middle"
+  >
+    GOLD
+  </text>
+</svg>
