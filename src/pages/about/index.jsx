@@ -10,8 +10,11 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>About Us | Digital Marketing Agency | Blue Bride Literary Agency</title>
+        <title key="about-title">
+          About Us | Digital Marketing Agency | Blue Bride Literary Agency
+        </title>
         <meta
+          key="about-meta-description"
           name="description"
           content="Your partners in growth. Learn how Blue Bride Literary Agency helps businesses thrive through custom SEO, web design, and marketing strategies. Meet your new team today."
         />

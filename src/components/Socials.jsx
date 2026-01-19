@@ -1,7 +1,9 @@
+import CONFIG from "../config.json";
+
 const socialLinks = [
   {
     id: 1,
-    href: "#",
+    href: CONFIG?.socials.Instagram,
     bgHoverColor: "hover:bg-[#d62976]",
     name: "Instagram",
     class: "containerOne",
@@ -16,7 +18,7 @@ const socialLinks = [
   },
   {
     id: 2,
-    href: "#",
+    href: CONFIG?.socials.Twitter,
     bgHoverColor: "hover:bg-[#00acee]",
     name: "Twitter",
     class: "containerTwo",
@@ -31,7 +33,7 @@ const socialLinks = [
   },
   {
     id: 3,
-    href: "#",
+    href: CONFIG?.socials.LinkedIn,
     bgHoverColor: "hover:bg-[#0072b1]",
     name: "LinkedIn",
     class: "containerThree",
@@ -46,7 +48,7 @@ const socialLinks = [
   },
   {
     id: 4,
-    href: "#",
+    href: CONFIG?.socials.WhatsApp,
     bgHoverColor: "hover:bg-[#128c7e]",
     name: "WhatsApp",
     class: "containerFour",
@@ -69,6 +71,7 @@ const Socials = () => {
           key={link.id}
           href={link.href}
           onClick={(e) => handleClick(e, link.name)}
+          target="_blank"
           className={`
             socialContainer
             w-14 h-14 rounded-full  

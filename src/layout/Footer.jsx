@@ -1,7 +1,7 @@
-import React from "react";
 import { NavLink } from "react-router";
-import AppLogo from "../assets/logo.svg";
 import Socials from "../components/Socials";
+import CONFIG from "../config.json";
+
 const FOOTER_LINKS = {
   services: [
     {
@@ -35,9 +35,10 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-12 gap-16 mb-24">
           <CompanyInfo />
+          <div className="hidden lg:block lg:col-span-2"></div>
           <FooterSection title="Services" links={FOOTER_LINKS.services} />
           <FooterSection title="Company" links={FOOTER_LINKS.company} />
-          <SubscribeSection />
+          {/* <SubscribeSection /> */}
         </div>
 
         <FooterBottom />
@@ -61,24 +62,15 @@ const CompanyInfo = () => (
       </div>
     </div>
 
-    <p className="text-1xl text-slate-400 font-medium leading-relaxed mb-10">
-      Our mission is to empower authors from aspiring writers to seasoned wordsmiths by providing a
-      comprehensive platform for creation.
+    <p className="text-[16px] text-slate-400 leading-relaxed mb-5">
+      Our mission is to empower authors from aspiring writers <br /> to seasoned wordsmiths by
+      providing a comprehensive <br /> platform for creation.
     </p>
     {/* 
     <div className="flex gap-4">
       <Socials />
     </div> */}
   </div>
-);
-
-const SocialIcon = ({ icon }) => (
-  <a
-    href="#"
-    className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center hover:bg-primary-main hover:text-white text-slate-400 transition-all hover:scale-110"
-  >
-    <span className="material-symbols-outlined">{icon}</span>
-  </a>
 );
 
 const FooterSection = ({ title, links }) => (
@@ -115,10 +107,11 @@ const SubscribeSection = () => (
       </button>
     </div>
 
-    <p className="text-slate-500 font-bold text-xs leading-loose">
-      1 Tower Center Boulevard,
+    <p className="text-slate-500 font-bold text-xs leading-loose whitespace-pre-wrap">
+      {/* 1 Tower Center Boulevard,
       <br />
-      Ste 1510 East Brunswick, NJ 08816
+      Ste 1510 East Brunswick, NJ 08816 */}
+      {CONFIG?.address}
     </p>
   </div>
 );
@@ -127,7 +120,7 @@ const FooterBottom = () => (
   <div className="pt-5 border-t border-white/5 flex flex-col  justify-between items-center gap-8">
     <Socials />
     <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">
-      © 2024 Blue Bridge Literary Agency. NJ Licensed.
+      © 2024 Blue Bridge Literary Agency
     </p>
 
     {/* <div className="flex gap-12 text-[10px] font-bold uppercase tracking-widest text-slate-500">
@@ -135,12 +128,6 @@ const FooterBottom = () => (
       <FooterLink href="#">Cookie Settings</FooterLink>
     </div> */}
   </div>
-);
-
-const FooterLink = ({ href, children }) => (
-  <a href={href} className="hover:text-white transition-colors">
-    {children}
-  </a>
 );
 
 export default Footer;

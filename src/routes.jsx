@@ -1,12 +1,10 @@
 import Home from "./pages/home";
 import About from "./pages/about";
 import Contact from "./pages/contact";
-import NotFound from "./pages/NotFound";
-import { Route, Routes } from "react-router";
+
+import { Navigate, Route, Routes } from "react-router";
 import Marketing from "./pages/marketing";
 import Publishing from "./pages/publishing";
-
-// import Temp from "./pages/temp";
 
 const routes = [
   {
@@ -16,6 +14,8 @@ const routes = [
     icon: "home",
     isNav: true,
     component: <Home />,
+    title: "Blue Bridge Literary Agency | Publishing and Marketing Agency",
+    metaDescription: "Turning Ideas Into Ink, Your Story, Our Canvas",
   },
 
   {
@@ -25,6 +25,9 @@ const routes = [
     route: "/publishing-services",
     isNav: true,
     component: <Publishing />,
+    title: "Content Publishing & CMS Management Services | Blue Bridge",
+    metaDescription:
+      "Stop struggling with your CMS. We handle content uploading, formatting, and publishing for WordPress, HubSpot, and more. Ensure error-free, SEO-optimized posts every time.",
   },
   {
     name: "Marketing",
@@ -33,6 +36,9 @@ const routes = [
     route: "/marketing-services",
     isNav: true,
     component: <Marketing />,
+    title: "Marketing Services | SEO & Web Design | Blue Bride Literary Agency",
+    metaDescription:
+      "We build brands that matter. Explore our suite of creative services, including custom web design, branding, and content marketing. Let's create something unique together.",
   },
   {
     name: "About Us",
@@ -41,6 +47,9 @@ const routes = [
     route: "/about-us",
     isNav: true,
     component: <About />,
+    title: "About Us | Digital Marketing Agency | Blue Bride Literary Agency",
+    metaDescription:
+      "Your partners in growth. Learn how Blue Bride Literary Agency helps businesses thrive through custom SEO, web design, and marketing strategies. Meet your new team today.",
   },
 
   {
@@ -50,6 +59,9 @@ const routes = [
     route: "/contact-us",
     isNav: true,
     component: <Contact />,
+    title: "Contact Us | SEO & Marketing Services | Blue Bridge Literary Agency",
+    metaDescription:
+      "Have a question about your marketing strategy? We're here to help. Reach out to the [Agency Name] team via phone, email, or chat. Let's discuss your goals.",
   },
 
   {
@@ -57,7 +69,10 @@ const routes = [
     id: "notfound",
     route: "/*",
     isNav: false,
-    component: <NotFound />,
+    // component: <NotFound />,
+    component: <Navigate to="/" />,
+    title: "",
+    metaDescription: "",
   },
 ];
 
@@ -71,17 +86,7 @@ const getRoutes = () =>
   });
 
 const RootRoutes = () => {
-  return (
-    <Routes>
-      <Route path="/" exact element={<Home />} />
-      <Route path="/publishing-services" element={<Publishing />} />
-      <Route path="/marketing-services" element={<Marketing />} />
-      <Route path="/about-us" element={<About />} />
-      <Route path="/contact-us" element={<Contact />} />
-      {/* <Route path="/temp" element={<Temp />} /> */}
-      <Route path="/*" element={<NotFound />} />
-    </Routes>
-  );
+  return <Routes>{getRoutes()}</Routes>;
 };
 
 export { getRoutes, RootRoutes };

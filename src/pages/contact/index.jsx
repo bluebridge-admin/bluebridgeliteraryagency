@@ -7,9 +7,14 @@ import Animate from "../../components/Animate";
 import { Helmet } from "react-helmet";
 
 import emailjs from "@emailjs/browser";
+import FontIcon from "../../components/FontIcon";
+
+import CONFIG from "../../config.json";
+import LoadingButton from "../../components/LoadingButton";
 
 const Contact = () => {
   const form = useRef();
+  const [isSending, setIsSending] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -19,13 +24,13 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    setIsSending(true);
     emailjs
       .sendForm(
-        "service_4c3gn0n", // Get from EmailJS dashboard
-        "template_661yyoo", // Get from EmailJS dashboard
+        import.meta.env.VITE_APP_EMAIL_SERVICE,
+        import.meta.env.VITE_APP_EMAIL_TEMPLATE,
         form.current,
-        "F1spcLvhTOFpzYWh9" // Get from EmailJS dashboard
+        import.meta.env.VITE_APP_EMAIL_KEY
       )
       .then(
         (result) => {
@@ -37,7 +42,10 @@ const Contact = () => {
           console.log("Error sending email:", error.text);
           alert("Failed to send message. Please try again.");
         }
-      );
+      )
+      .finally(() => {
+        setIsSending(false);
+      });
   };
 
   const handleChange = (e) => {
@@ -50,8 +58,11 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us | SEO & Marketing Services | Blue Bridge Literary Agency</title>
+        <title key="contact-title">
+          Contact Us | SEO & Marketing Services | Blue Bridge Literary Agency
+        </title>
         <meta
+          key="contact-meta-description"
           name="description"
           content="Have a question about your marketing strategy? We're here to help. Reach out to the [Agency Name] team via phone, email, or chat. Let's discuss your goals."
         />
@@ -72,49 +83,49 @@ const Contact = () => {
                 achieve success.
               </p>
 
-              <div className="space-y-8">
+              <div className="space-y-6">
                 <a
-                  href="tel:1-800-538-5788"
-                  className="flex items-center gap-8 group w-fit p-2 -ml-2 rounded-2xl hover:bg-white hover:shadow-lg transition-all duration-300"
+                  href={`tel:${CONFIG.phone}`}
+                  className="flex items-center gap-4 group w-fit p-2 -ml-2 rounded-2xl hover:bg-white hover:shadow-lg transition-all duration-300"
                 >
-                  <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-primary-main group-hover:bg-primary-main group-hover:text-white transition-all shadow-sm group-hover:rotate-12">
-                    <span className="material-symbols-outlined text-3xl">call</span>
+                  <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-primary-main group-hover:bg-primary-main group-hover:text-white transition-all shadow-sm group-hover:rotate-12">
+                    <FontIcon icon="call" size="md" />
                   </div>
                   <div>
                     <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">
                       Office Line
                     </p>
-                    <p className="text-lg lg:text-xl  font-black text-slate-900">1-800-538-5788</p>
+                    <p className="text-md lg:text-xl  font-bold text-slate-900">{CONFIG.phone}</p>
                   </div>
                 </a>
 
                 <a
-                  href="mailto:contact@bluebridgeliterary.com"
-                  className="flex items-center gap-8 group w-fit p-2 -ml-2 rounded-2xl hover:bg-white hover:shadow-lg transition-all duration-300"
+                  href={`mailto:${CONFIG.email}`}
+                  className="flex items-center gap-4 group w-fit p-2 -ml-2 rounded-2xl hover:bg-white hover:shadow-lg transition-all duration-300"
                 >
-                  <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-primary-main group-hover:bg-primary-main group-hover:text-white transition-all shadow-sm group-hover:-rotate-12">
-                    <span className="material-symbols-outlined text-3xl">mail</span>
+                  <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-primary-main group-hover:bg-primary-main group-hover:text-white transition-all shadow-sm group-hover:-rotate-12">
+                    <FontIcon icon="mail" size="md" />
                   </div>
                   <div>
                     <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">
                       Direct Email
                     </p>
-                    <p className="text-lg lg:text-xl font-black text-slate-900">
-                      admin@bluebridgeliteraryagency.com
+                    <p className="text-md lg:text-xl font-bold text-slate-900 truncate">
+                      {CONFIG.email}
                     </p>
                   </div>
                 </a>
 
-                <div className="flex items-center gap-8 group w-fit p-2 -ml-2 rounded-2xl hover:bg-white hover:shadow-lg transition-all duration-300 cursor-default">
-                  <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-primary-main group-hover:bg-primary-main group-hover:text-white transition-all shadow-sm group-hover:rotate-6">
-                    <span className="material-symbols-outlined text-3xl">location_on</span>
+                <div className="flex items-center gap-4 group w-fit p-2 -ml-2 rounded-2xl hover:bg-white hover:shadow-lg transition-all duration-300 cursor-default">
+                  <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-primary-main group-hover:bg-primary-main group-hover:text-white transition-all shadow-sm group-hover:rotate-6">
+                    <FontIcon icon="location_on" size="md" />
                   </div>
                   <div>
                     <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">
                       Visit Us
                     </p>
-                    <p className="text-lg lg:text-xl font-black text-slate-900">
-                      East Brunswick, NJ
+                    <p className="text-md lg:text-xl font-bold text-slate-900 whitespace-pre-wrap">
+                      {CONFIG.address}
                     </p>
                   </div>
                 </div>
@@ -135,10 +146,11 @@ const Contact = () => {
                       <input
                         className="w-full bg-slate-50 border border-slate-200 px-6 py-4 rounded-xl outline-none focus:bg-white focus:border-primary-main focus:ring-4 focus:ring-blue-500/10 transition-all font-bold text-slate-800 placeholder:text-slate-300"
                         placeholder="John Doe"
-                        required=""
+                        required={true}
                         type="text"
                         name="name"
                         onChange={handleChange}
+                        aria-required={true}
                       />
                     </div>
                     <div className="space-y-2">
@@ -148,7 +160,7 @@ const Contact = () => {
                       <input
                         className="w-full bg-slate-50 border border-slate-200 px-6 py-4 rounded-xl outline-none focus:bg-white focus:border-primary-main focus:ring-4 focus:ring-blue-500/10 transition-all font-bold text-slate-800 placeholder:text-slate-300"
                         placeholder="john@example.com"
-                        required=""
+                        required={true}
                         type="email"
                         name="email"
                         onChange={handleChange}
@@ -165,6 +177,7 @@ const Contact = () => {
                         className="w-full bg-slate-50 border border-slate-200 px-6 py-4 rounded-xl outline-none focus:bg-white focus:border-primary-main focus:ring-4 focus:ring-blue-500/10 transition-all font-bold text-slate-800 appearance-none cursor-pointer"
                         name="service"
                         onChange={handleChange}
+                        required={true}
                       >
                         <option>Publishing Services</option>
                         <option>Marketing Brilliance</option>
@@ -185,18 +198,18 @@ const Contact = () => {
                       name="message"
                       placeholder="Tell us about your project..."
                       onChange={handleChange}
+                      required={true}
                     ></textarea>
                   </div>
 
-                  <button
+                  <LoadingButton
                     type="submit"
-                    className="w-full bg-primary-main text-white py-5 rounded-xl text-xs font-black uppercase tracking-[0.2em] shadow-xl shadow-blue-500/20 hover:bg-slate-900 hover:shadow-slate-900/30 transition-all active:scale-95 duration-300 mt-4 group"
+                    isLoading={isSending}
+                    className="gap-5 w-full bg-primary-main text-white py-5 rounded-xl text-xs font-black uppercase tracking-[0.2em] shadow-xl shadow-blue-500/20 hover:bg-slate-900 hover:shadow-slate-900/30 transition-all active:scale-95 duration-300 mt-4 group"
                   >
-                    Send Inquiry
-                    <span className="material-symbols-outlined align-middle ml-1 text-sm group-hover:translate-x-1 transition-transform">
-                      send
-                    </span>
-                  </button>
+                    {isSending ? " sending..." : "Send Inquiry"}
+                    <FontIcon icon="send" />
+                  </LoadingButton>
                 </form>
               </div>
             </div>

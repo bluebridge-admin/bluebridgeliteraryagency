@@ -28,8 +28,14 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Blue Bridge Literary Agency | Publishing and Marketing Agency</title>
-        <meta name="description" content="Turning Ideas Into Ink, Your Story, Our Canvas" />
+        <title key="home-title">
+          Blue Bridge Literary Agency | Publishing and Marketing Agency
+        </title>
+        <meta
+          key="home-meta-description"
+          name="description"
+          content="Turning Ideas Into Ink, Your Story, Our Canvas"
+        />
       </Helmet>
       <PageSection id="home" className="flex items-center justify-center min-h-[85vh] ">
         <div className="bg-outline-text top-1/4 -left-10">CREATIVITY</div>

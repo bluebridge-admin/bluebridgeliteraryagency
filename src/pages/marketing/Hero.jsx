@@ -41,7 +41,7 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <NavLink
             to="/contact-us"
-            className="bg-primary-main hover:translate-y-[-4px] text-[var(--color-primary-contrastText)] px-10 py-4 rounded-full font-bold text-sm tracking-widest uppercase transition-all shadow-xl shadow-[var(--color-primary-main)]/30 hover:shadow-[var(--color-primary-main)]/50"
+            className="text-center bg-primary-main hover:translate-y-[-4px] text-[var(--color-primary-contrastText)] px-10 py-4 rounded-full font-bold text-sm tracking-widest uppercase transition-all shadow-xl shadow-[var(--color-primary-main)]/30 hover:shadow-[var(--color-primary-main)]/50"
           >
             Get Started Today
           </NavLink>

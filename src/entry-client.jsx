@@ -6,7 +6,7 @@ import { BrowserRouter } from "react-router";
 hydrateRoot(
   document.getElementById("root"),
   <StrictMode>
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </StrictMode>

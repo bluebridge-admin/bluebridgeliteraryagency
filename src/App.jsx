@@ -1,4 +1,4 @@
-import { Suspense, useEffect } from "react";
+import { useEffect } from "react";
 
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
@@ -8,48 +8,12 @@ import Main from "./layout/Main";
 import { RootRoutes } from "./routes";
 import { useLocation } from "react-router";
 
-const customCards = [
-  {
-    text: "Design",
-    rotation: -20,
-    icon: <span className="material-symbols-outlined text-3xl">design_services</span>,
-  },
-  {
-    text: "Develop",
-    rotation: 0,
-    icon: <span className="material-symbols-outlined text-3xl">code_blocks</span>,
-  },
-  {
-    text: "Deploy",
-    rotation: 20,
-    icon: <span className="material-symbols-outlined text-3xl">deployed_code_history</span>,
-  },
-];
-
-function Loader() {
-  return (
-    <div
-      style={{
-        position: "fixed",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        width: "100%",
-        height: "100%",
-      }}
-    >
-      <CircularProgress />
-    </div>
-  );
-}
-
 function App() {
   const { pathname } = useLocation();
 
-  console.log("import.meta.env: ", import.meta.env);
-
   useEffect(() => {
     // Custom Cursor
+    console.log("import.meta.env: ", import.meta.env);
     const cursor = document.getElementById("cursor");
     const handleMouseMove = (e) => {
       if (cursor) {
@@ -78,9 +42,7 @@ function App() {
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-cyan-50 rounded-full blur-[80px] opacity-60 -z-10"></div>
       <Header />
       <Main>
-        {/* <Suspense fallback={<Loader />}> */}
         <RootRoutes />
-        {/* </Suspense> */}
       </Main>
       <Footer />
     </>
