@@ -52,7 +52,15 @@ const packages = [
     description:
       "The ultimate publishing bundle combining premium editing, marketing exposure, and long-term visibility to help your book stand out.",
     features: [
-      "Everything in Silver, plus:",
+      "Everything in Bronze, plus:",
+      "Hardcover Availability",
+      "Free Basic Editing (up to 35,000 words)",
+      "In-depth Editorial Evaluation",
+      "Booksellers Return Program",
+      "iPage Listing Advertising",
+      "Author Website Set-Up",
+      "15 Paperback Copies",
+      "5 Hardcover Copies",
       "Free Basic Editing (up to 55,000 words)",
       "24-Month Booksellers Return Program",
       "Basic Search Engine Optimization",
