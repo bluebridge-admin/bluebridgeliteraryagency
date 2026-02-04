@@ -100,7 +100,7 @@ function WebsiteCreation() {
         </Animate>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
-            <Animate animation="slideUp" delay={100 * index}>
+            <Animate key={index} animation="slideUp" delay={100 * index}>
               <div
                 key={index}
                 className="bg-white p-6 rounded-2xl shadow-sm border border-[var(--color-silver-main)]/20 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 h-full group"

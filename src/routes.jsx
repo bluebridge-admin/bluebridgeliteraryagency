@@ -67,7 +67,7 @@ const routes = [
   {
     name: "Not Found",
     id: "notfound",
-    route: "/*",
+    route: "*",
     isNav: false,
     // component: <NotFound />,
     component: <Navigate to="/" />,
@@ -89,5 +89,5 @@ const RootRoutes = () => {
   return <Routes>{getRoutes()}</Routes>;
 };
 
-export { getRoutes, RootRoutes };
-export default routes;
+export { getRoutes, routes };
+export default RootRoutes;

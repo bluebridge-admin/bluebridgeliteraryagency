@@ -11,15 +11,14 @@ function Marketing() {
   return (
     <>
       <Helmet>
-        <title key="marketing-title">
-          Marketing Services | SEO & Web Design | Blue Bride Literary Agency
-        </title>
+        <title key="marketing-title">Marketing Services | SEO & Web Design</title>
         <meta
           key="marketing-meta-description"
           name="description"
           content="We build brands that matter. Explore our suite of creative services, including custom web design, branding, and content marketing. Let's create something unique together."
         />
       </Helmet>
+      <h1 hidden>Marketing Services | SEO & Web Design</h1>
       <Hero />
       <WebsiteCreation />
       <SEOService />

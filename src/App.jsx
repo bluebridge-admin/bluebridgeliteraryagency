@@ -5,15 +5,13 @@ import Footer from "./layout/Footer";
 
 import Main from "./layout/Main";
 
-import { RootRoutes } from "./routes";
+import RootRoutes from "./routes";
 import { useLocation } from "react-router";
 
 function App() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    // Custom Cursor
-    console.log("import.meta.env: ", import.meta.env);
     const cursor = document.getElementById("cursor");
     const handleMouseMove = (e) => {
       if (cursor) {

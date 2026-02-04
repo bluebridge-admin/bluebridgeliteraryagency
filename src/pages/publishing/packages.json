@@ -1,0 +1,158 @@
+{
+  "blackAndWhite": {
+    "title": "Black and White Publishing Package",
+    "description": "Choose the perfect pathway for your book. From digital-first launches to full-scale hardcover distribution, we have a solution tailored to your goals.",
+    "packages": [
+      {
+        "id": "bronze",
+        "title": "Bronze",
+        "subtitle": "Economical & Essential",
+        "description": "Our most economical publishing program, equipped with all the essentials for efficient international publication—plus the flexibility to add services anytime.",
+        "features": [
+          "Cover and Interior Customization",
+          "ISBN Assignment",
+          "Paperback Availability",
+          "ePub / eBook Availability",
+          "Global Distribution",
+          "Library of Congress Control Number",
+          "Copyright Registration",
+          "Unlimited Color / B&W Image Insertions",
+          "Amazon \"Look Inside\" & Google Preview",
+          "Barnes & Noble \"Read Instantly\"",
+          "5 Free Paperback Copies"
+        ],
+        "highlight": false,
+        "color": "bg-slate-100 text-slate-800"
+      },
+      {
+        "id": "silver",
+        "title": "Silver",
+        "subtitle": "Hardcover & Extended Value",
+        "description": "A wide-ranging package designed for authors ready to compete in today’s publishing market with strong presentation and editorial support.",
+        "features": [
+          "Everything in Bronze, plus:",
+          "Hardcover Availability",
+          "Free Basic Editing (up to 35,000 words)",
+          "In-depth Editorial Evaluation",
+          "Booksellers Return Program",
+          "iPage Listing Advertising",
+          "Author Website Set-Up",
+          "15 Paperback Copies",
+          "5 Hardcover Copies"
+        ],
+        "highlight": false,
+        "color": "bg-gray-100 text-gray-800"
+      },
+      {
+        "id": "gold",
+        "title": "Gold",
+        "subtitle": "Ultimate All-in-One Solution",
+        "description": "The ultimate publishing bundle combining premium editing, marketing exposure, and long-term visibility to help your book stand out.",
+        "features": [
+          "Everything in Bronze, plus:",
+          "Hardcover Availability",
+          "Free Basic Editing (up to 35,000 words)",
+          "In-depth Editorial Evaluation",
+          "Booksellers Return Program",
+          "iPage Listing Advertising",
+          "Author Website Set-Up",
+          "15 Paperback Copies",
+          "5 Hardcover Copies",
+          "Free Basic Editing (up to 55,000 words)",
+          "24-Month Booksellers Return Program",
+          "Basic Search Engine Optimization",
+          "30 Days Facebook Marketing",
+          "Goodreads Giveaway Program",
+          "20 Paperback Copies",
+          "10 Hardcover Copies"
+        ],
+        "highlight": true,
+        "color": "bg-[#007BA7] text-white"
+      }
+    ]
+  },
+  "colored": {
+    "title": "Colored Publishing Package",
+    "description": "Blue Bridge Literary Agency's full-colored packages provide an exceptional combination of design, layout, formatting, and illustrations. Perfect for children's picture books, recipe books, travel guides, photo books, and a lot more.",
+    "packages": [
+      {
+        "id": "col-standard",
+        "title": "Standard",
+        "subtitle": "Essential Color Formatting",
+        "description": "Perfect for getting your visual story out to the world with professional formatting and essential distribution channels.",
+        "features": [
+          "Electronic Digital Formatting (E-Book)",
+          "Paperback Publishing",
+          "Cover & Interior Customization",
+          "Image Insertions (Up to 50)",
+          "Electronic Proofs of Your Books",
+          "Interior Revisions (One Block of 50)",
+          "One-on-One Author Support",
+          "Bookstore Availability",
+          "Worldwide Online Distribution",
+          "ISBN Assignment",
+          "5 Paperback Copies",
+          "Amazon Look Inside",
+          "Google Preview",
+          "Simple Image Manipulation",
+          "US Copyright",
+          "Library of Congress Control Number",
+          "Booksellers Return Program (5 years)"
+        ],
+        "highlight": false
+      },
+      {
+        "id": "col-premium",
+        "title": "Premium",
+        "subtitle": "Expanded Print Options",
+        "description": "Elevate your visual book with hardback availability and extended return programs for serious authors.",
+        "features": [
+          "Electronic Digital Formatting (E-Book)",
+          "Paperback & Hardcover Publishing",
+          "Cover & Interior Customization",
+          "Image Insertions (Up to 50)",
+          "Electronic Proofs & Revisions",
+          "One-on-One Author Support",
+          "Bookstore Availability",
+          "Worldwide Online Distribution",
+          "ISBN Assignment",
+          "10 Paperback Copies",
+          "1 Hardback Copy",
+          "Amazon Look Inside",
+          "Google Preview",
+          "Simple Image Manipulation",
+          "US Copyright",
+          "Library of Congress Control Number",
+          "Booksellers Return Program (10 years)"
+        ],
+        "highlight": false
+      },
+      {
+        "id": "col-deluxe",
+        "title": "Deluxe",
+        "subtitle": "Complete Creative Suite",
+        "description": "The ultimate package for color books, offering maximum copies, long-term bookstore returns, and premium support.",
+        "features": [
+          "Electronic Digital Formatting (E-Book)",
+          "Paperback & Hardcover Publishing",
+          "Cover & Interior Customization",
+          "Image Insertions (Up to 50)",
+          "Electronic Proofs & Revisions",
+          "One-on-One Author Support",
+          "Bookstore Availability",
+          "Worldwide Online Distribution",
+          "ISBN Assignment",
+          "20 Paperback Copies",
+          "5 Hardback Copies",
+          "Amazon Look Inside",
+          "Google Preview",
+          "Simple Image Manipulation",
+          "US Copyright",
+          "Library of Congress Control Number",
+          "Booksellers Return Program (20 years)"
+        ],
+        "highlight": true
+      }
+    ]
+  }
+}

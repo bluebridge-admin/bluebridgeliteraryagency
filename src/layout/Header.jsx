@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { NavLink, useLocation } from "react-router";
-import AppLogo from "../assets/logo.svg";
-import routes from "../routes";
+import { NavLink } from "react-router";
+
+import { routes } from "../routes";
 
 const NavLinks = ({ onClick, isMobile = false }) => {
   const contactClass =
@@ -43,25 +43,12 @@ const Header = () => {
     document.body.style.overflow = "";
   };
   return (
-    //     background: rgba(255, 255, 255, 0.8);
-    // color: rgb(52, 71, 103);
-    // border-radius: 0.75rem;
-    // box-shadow: rgba(0, 0, 0, 0.1) 0rem 0.25rem 0.375rem -0.0625rem, rgba(0, 0, 0, 0.06) 0rem 0.125rem 0.25rem -0.0625rem;
-    // backdrop-filter: saturate(200%) blur(30px);
     <header className="fixed top-0 w-full z-[60] glass-nav py-1 transition-all duration-300">
       <nav className="max-w-7xl mx-auto px-6 flex justify-between items-center   ">
         <NavLink to="/" className="flex items-center gap-3 group cursor-pointer z-50">
           <div className="w-16 h-16 rounded-lg flex items-center justify-center text-white transition-transform group-hover:rotate-12 group-hover:scale-110 duration-300">
-            <img src="favicon.svg" alt="blue bridge literary agency logo" />
+            <img src="favicon.svg" alt="blue bridge literary agency" />
           </div>
-          {/* <p className="leading-none">
-            <span className="text-xl font-black tracking-tighter leading-none block text-slate-900">
-              BLUE BRIDGE
-            </span>
-            <span className="text-[9px] font-bold tracking-[0.3em] uppercase text-primary-main">
-              Literary Agency
-            </span>
-          </p> */}
         </NavLink>
         <div className="hidden lg:flex items-center space-x-12">
           <NavLinks onClick={closeMenu} />
