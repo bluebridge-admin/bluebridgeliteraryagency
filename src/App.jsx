@@ -12,8 +12,6 @@ function App() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    // Custom Cursor
-    console.log("import.meta.env: ", import.meta.env);
     const cursor = document.getElementById("cursor");
     const handleMouseMove = (e) => {
       if (cursor) {

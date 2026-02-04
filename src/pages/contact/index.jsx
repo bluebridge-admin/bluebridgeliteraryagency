@@ -67,6 +67,7 @@ const Contact = () => {
           content="Have a question about your marketing strategy? We're here to help. Reach out to the [Agency Name] team via phone, email, or chat. Let's discuss your goals."
         />
       </Helmet>
+      <h1 hidden>About Us | Blue Bride Literary Agency</h1>
       <PageSection>
         <Animate animation="fadeIn">
           <Heading>Get In Touch</Heading>

@@ -18,6 +18,7 @@ function Publishing() {
           content="Stop struggling with your CMS. We handle content uploading, formatting, and publishing for WordPress, HubSpot, and more. Ensure error-free, SEO-optimized posts every time."
         />
       </Helmet>
+      <h1 hidden>Content Publishing & CMS Management Services | Blue Bridge</h1>
       <Hero />
       <Animate animation="slideUp">
         <ProcessesSection />
