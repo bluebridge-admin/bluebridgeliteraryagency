@@ -5,6 +5,7 @@ import Contact from "./pages/contact";
 import { Navigate, Route, Routes } from "react-router";
 import Marketing from "./pages/marketing";
 import Publishing from "./pages/publishing";
+import NotFound from "./pages/NotFound";
 
 const routes = [
   {
@@ -69,8 +70,8 @@ const routes = [
     id: "notfound",
     route: "*",
     isNav: false,
-    // component: <NotFound />,
-    component: <Navigate to="/" />,
+    component: <NotFound />,
+    // component: <Navigate to="/" />,
     title: "",
     metaDescription: "",
   },

@@ -21,10 +21,10 @@ const CTAButton = ({ href, children }) => (
 );
 
 const Home = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
+  // const [isLoaded, setIsLoaded] = useState(false);
+  // useEffect(() => {
+  //   setIsLoaded(true);
+  // }, []);
   return (
     <>
       <Helmet>
@@ -32,10 +32,14 @@ const Home = () => {
         <meta
           key="home-meta-description"
           name="description"
-          content="Blue Bridge Literary Agency | Publishing and Marketing - Turning Ideas Into Ink, Your Story, Our Canvas"
+          content="Expert publishing solutions & marketing brilliance for authors. Navigate your path to sustainable literary prosperity with our comprehensive author services."
         />
       </Helmet>
-      <h1 hidden>Blue Bridge Literary Agency | Publishing and Marketing</h1>
+      <h1 hidden>
+        Blue Bridge Literary Agency | Publishing and Marketing - Expert publishing solutions &
+        marketing brilliance for authors. Navigate your path to sustainable literary prosperity with
+        our comprehensive author services.
+      </h1>
       <PageSection id="home" className="flex items-center justify-center min-h-[85vh] ">
         <div className="bg-outline-text top-1/4 -left-10">CREATIVITY</div>
         <div className="w-full h-100 grid lg:grid-cols-12 gap-12 items-between justify-between mb-50">

@@ -2,13 +2,18 @@ import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router";
 
 import App from "./App";
+import Head from "./Head";
 
 export function render(url) {
-  console.log("url: ", url)
   const html = renderToString(
-    <StaticRouter location={url}>
+    <StaticRouter location={`/${url}`}>
       <App />
     </StaticRouter>
   );
-  return { html, url };
+  const head = renderToString(
+    <StaticRouter location={`/${url}`}>
+      <Head />
+    </StaticRouter>
+  );
+  return { html, url, head };
 }
