@@ -4,9 +4,8 @@ import { StaticRouter } from "react-router";
 import App from "./App";
 
 export function render(url) {
-  console.log("url: ", url)
   const html = renderToString(
-    <StaticRouter location={url}>
+    <StaticRouter location={`/${url}`}>
       <App />
     </StaticRouter>
   );
